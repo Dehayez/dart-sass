@@ -8,6 +8,8 @@
 * There was no way to define private members or placeholder selectors that were inaccessible to downstream stylesheets.
 
 The new module system and the @use rule address all the problems above.
+<br/>
+<br/>
 
 ### Difference between @import and @use ###
 @use does the same as @import but has some notable differences:
@@ -18,10 +20,14 @@ The new module system and the @use rule address all the problems above.
 * Members from the used fil are only made available locally, but not passed along to future imports.
 * Similarly, @extends will only apply up the chain; extending selectors in imported files, but not extending files that import this one.
 All imported members are namespaced by default
+<br/>
 
-> October 2021 - Start deprecation of node-sass
+> October 2021 - Start deprecation of node-sass <br/>
 > October 2022 - No support anymore
 
+<br/>
+<br/>
+<br/>
 
 ## How ##
 The [migration tool](https://sass-lang.com/documentation/cli/migrator "migration tool") automatically converts most @import-based code to @use-based code.
@@ -35,7 +41,11 @@ Install sass
 Watch files for changes
 `sass --watch scss:css`
 
+<br/>
+<br/>
+<br/>
+
 ## Documentation ##
-[Sass Import](https://sass-lang.com/documentation/at-rules/import "sass import")
-[Sass Forward](https://sass-lang.com/documentation/at-rules/forward "sass forward")
-[Sass Use](https://sass-lang.com/documentation/at-rules/use "sass use")
+[Sass Import](https://sass-lang.com/documentation/at-rules/import "sass import") <br/>
+[Sass Forward](https://sass-lang.com/documentation/at-rules/forward "sass forward") <br/>
+[Sass Use](https://sass-lang.com/documentation/at-rules/use "sass use") <br/>
