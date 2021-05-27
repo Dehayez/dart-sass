@@ -27,7 +27,6 @@ All imported members are namespaced by default
 
 <br/>
 <br/>
-<br/>
 
 ## How ##
 The [migration tool](https://sass-lang.com/documentation/cli/migrator "migration tool") automatically converts most @import-based code to @use-based code.
@@ -35,13 +34,12 @@ The [migration tool](https://sass-lang.com/documentation/cli/migrator "migration
 First of all, support for LibSass is not available yet. The extention "Live Sass Compiler" uses LibSass so RIP (for now).
 
 ### Commands ###
-Install sass
+Install sass <br/>
 `npm install -D sass`
 
-Watch files for changes
+Watch files for changes <br/>
 `sass --watch scss:css`
 
-<br/>
 <br/>
 <br/>
 
@@ -49,3 +47,6 @@ Watch files for changes
 [Sass Import](https://sass-lang.com/documentation/at-rules/import "sass import") <br/>
 [Sass Forward](https://sass-lang.com/documentation/at-rules/forward "sass forward") <br/>
 [Sass Use](https://sass-lang.com/documentation/at-rules/use "sass use") <br/>
+
+### More ###
+[Dart Sass Module System](https://css-tricks.com/introducing-sass-modules/ "Introducing Sass Modules") <br/>

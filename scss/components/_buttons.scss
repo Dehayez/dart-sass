@@ -1,0 +1,11 @@
+// Imports index file and uses filename as index
+@use '../utils';
+
+// You can change the namespace like this:
+// @use '../utils' as u; --> u.$c-tomat
+// @use '../utils' as *; --> $c-tomat
+
+button {
+	background-color: utils.$c-tomat;
+	@include utils.buttonMixin;
+}

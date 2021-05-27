@@ -1,0 +1,6 @@
+@use './colors' as c;
+
+@mixin buttonMixin {
+	padding: .4em 1em;
+	color: c.$c-gras;
+}

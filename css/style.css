@@ -1,5 +1,7 @@
-body {
-  background-color: beige;
+button {
+  background-color: red;
+  padding: 0.4em 1em;
+  color: green;
 }
 
 /*# sourceMappingURL=style.css.map */
