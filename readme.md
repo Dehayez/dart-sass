@@ -1,19 +1,41 @@
-oktober 2021 - start deprecation node-sass
-oktober 2022 - geen support
+# The use of @use #
+## Why ##
+### Problems with @import ###
+* @import makes all variables, mixins, and functions globally accessible. This makes it very difficult for people (or tools) to tell where anything is defined.
+* Because everything’s global, libraries must prefix to all their members to avoid naming collisions.
+* @extend rules are also global, which makes it difficult to predict which style rules will be extended.
+* Each stylesheet is executed and its CSS emitted every time it’s @imported, which increases compilation time and produces bloated output.
+* There was no way to define private members or placeholder selectors that were inaccessible to downstream stylesheets.
 
-import doet hetzelfde als use, maar het geeft de variablen namespaces om collision te voorkomen
+The new module system and the @use rule address all the problems above.
 
+### Difference between @import and @use ###
+@use does the same as @import but has some notable differences:
 
-Verschillen tussen [Import](https://sass-lang.com/documentation/at-rules/import "Named link title") en forward/use
-The file is only imported once, no matter how many times you @use it in a project.
-Variables, mixins, and functions (what Sass calls “members”) that start with an underscore (_) or hyphen (-) are considered private, and not imported.
-Members from the used file (buttons.scss in this case) are only made available locally, but not passed along to future imports.
-Similarly, @extends will only apply up the chain; extending selectors in imported files, but not extending files that import this one.
+*  Gives variables namesspaces to prevent collision
+* The file is only imported once, no matter how many times you @use it in a project.
+* Variables, mixins, and functions (what Sass calls “members”) that start with an underscore (_) or hyphen (-) are considered private, and not imported.
+* Members from the used fil are only made available locally, but not passed along to future imports.
+* Similarly, @extends will only apply up the chain; extending selectors in imported files, but not extending files that import this one.
 All imported members are namespaced by default
 
-Commands
-	install sass
-	npm install -D sass
+> October 2021 - Start deprecation of node-sass
+> October 2022 - No support anymore
 
-	watch files for changes
-	sass --watch scss:css
+
+## How ##
+The [migration tool](https://sass-lang.com/documentation/cli/migrator "migration tool") automatically converts most @import-based code to @use-based code.
+
+First of all, support for LibSass is not available yet. The extention "Live Sass Compiler" uses LibSass so RIP (for now).
+
+### Commands ###
+Install sass
+`npm install -D sass`
+
+Watch files for changes
+`sass --watch scss:css`
+
+## Documentation ##
+[Sass Import](https://sass-lang.com/documentation/at-rules/import "sass import")
+[Sass Forward](https://sass-lang.com/documentation/at-rules/forward "sass forward")
+[Sass Use](https://sass-lang.com/documentation/at-rules/use "sass use")
