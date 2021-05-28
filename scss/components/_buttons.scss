@@ -3,7 +3,7 @@
 
 // You can change the namespace like this:
 // @use '../utils' as u; --> u.$c-tomat
-// @use '../utils' as *; --> $c-tomat
+// @use '../utils' as *; --> $c-tomat (but this can cause collision)
 
 button {
 	background-color: utils.$c-tomat;
