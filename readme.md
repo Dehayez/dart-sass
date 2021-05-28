@@ -1,5 +1,8 @@
 # The use of @use #
 ## Why ##
+> October 2021 - Start [deprecation of LibSass](https://github.com/sass/node-sass/issues/2952 "deprecation of LibSass"), including node-sass, including @import <br/>
+> October 2022 - No support anymore
+
 ### Problems with @import ###
 * @import makes all variables, mixins, and functions globally accessible. This makes it very difficult for people (or tools) to tell where anything is defined.
 * Because everything’s global, libraries must prefix to all their members to avoid naming collisions.
@@ -22,8 +25,6 @@ The new module system and the @use rule address all the problems above.
 All imported members are namespaced by default
 <br/>
 
-> October 2021 - Start deprecation of node-sass <br/>
-> October 2022 - No support anymore
 
 <br/>
 <br/>
